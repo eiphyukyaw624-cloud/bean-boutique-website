@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bean & Brew Coffee Shop</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- AOS.js -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Logo Icon"
+                        class="logo-icon">
+                    BeanBoutique
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="menu" id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee
+                            Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li>
+                        <a href="#">Services ⏷</a>
+                        <div class="dropdown">
+                            <a href="events.html">Events and Workshops</a>
+                            <a href="offer.html">Special Offers and
+                                Scriptions</a>
+
+                        </div>
+                    </li>
+                    <li>
+            <a href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i> Shopping Cart
+              (<span id="cartCount">0</span>)</a>
+          </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<!-- SPECIAL OFFERS-->
+
+<main>
+<section class="offers-container">
+
+    <div class="section-heading" data-aos="fade-up">
+
+        <span class="section-kicker">
+            SPECIAL OFFERS
+        </span>
+
+        <h1>
+            Enjoy Our Coffee Deals
+        </h1>
+
+        <p>
+            Take advantage of our special promotions and enjoy
+            your favourite coffee at great prices.
+        </p>
+
+    </div>
+
+
+    <div class="offers-grid">
+
+        <!-- Offer 1 -->
+
+        <article class="offer-card"
+                 data-aos="fade-up">
+
+            <div class="offer-icon">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+
+            <span class="offer-tag">
+                15% OFF
+            </span>
+
+            <h2>
+                Coffee Starter Offer
+            </h2>
+
+            <p>
+                Get 15% off when you purchase any two bags of
+                coffee from our selected coffee collection.
+            </p>
+
+            <div class="offer-details">
+                <i class="fa-solid fa-check"></i>
+                Selected coffee products
+            </div>
+
+            <div class="offer-details">
+                <i class="fa-solid fa-check"></i>
+                Great for new customers
+            </div>
+
+        </article>
+
+
+        <!-- Offer 2 -->
+
+        <article class="offer-card"
+                 data-aos="fade-up"
+                 data-aos-delay="150">
+
+            <div class="offer-icon">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+
+            <span class="offer-tag">
+                FREE GIFT
+            </span>
+
+            <h2>
+                Weekend Coffee Deal
+            </h2>
+
+            <p>
+                Receive a free coffee sample when you purchase
+                three or more coffee products during our weekend promotion.
+            </p>
+
+            <div class="offer-details">
+                <i class="fa-solid fa-check"></i>
+                Free coffee sample
+            </div>
+
+            <div class="offer-details">
+                <i class="fa-solid fa-check"></i>
+                Available on selected weekends
+            </div>
+
+        </article>
+
+
+        <!-- Offer 3 -->
+
+        <article class="offer-card"
+                 data-aos="fade-up"
+                 data-aos-delay="300">
+
+            <div class="offer-icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+
+            <span class="offer-tag">
+                FREE DELIVERY
+            </span>
+
+            <h2>
+                Coffee Delivery Offer
+            </h2>
+
+            <p>
+                Enjoy free local delivery when your coffee order
+                reaches our minimum order value.
+            </p>
+
+            <div class="offer-details">
+                <i class="fa-solid fa-check"></i>
+                Convenient home delivery
+            </div>
+
+            <div class="offer-details">
+                <i class="fa-solid fa-check"></i>
+                Save on delivery costs
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SUBSCRIPTIONS
+========================= -->
+
+<section class="subscription-section"
+         id="subscriptions">
+
+    <div class="subscription-container">
+
+        <div class="section-heading"
+             data-aos="fade-up">
+
+            <span class="section-kicker">
+                COFFEE SUBSCRIPTIONS
+            </span>
+
+            <h2>
+                Choose Your Coffee Plan
+            </h2>
+
+            <p>
+                Receive freshly selected coffee regularly without
+                having to place an order every time.
+            </p>
+
+        </div>
+
+
+        <div class="subscription-grid">
+
+            <!-- BASIC -->
+
+            <article class="subscription-card"
+                     data-aos="fade-up">
+
+                <div class="subscription-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <h3>
+                    Basic Bean
+                </h3>
+
+                <p class="subscription-price">
+                    $15
+                    <span>/ month</span>
+                </p>
+
+                <p class="subscription-description">
+                    A simple plan for customers who enjoy
+                    regular coffee deliveries.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        1 bag of coffee per month
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Selected coffee beans
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Monthly delivery
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        5% member discount
+                    </li>
+
+                </ul>
+
+                <a href="#subscription-form"
+                   class="subscription-btn">
+                   Choose Basic
+                </a>
+
+            </article>
+
+
+            <!-- PREMIUM -->
+
+            <article class="subscription-card featured"
+                     data-aos="fade-up"
+                     data-aos-delay="150">
+
+                <div class="popular-label">
+                    MOST POPULAR
+                </div>
+
+                <div class="subscription-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3>
+                    Coffee Lover
+                </h3>
+
+                <p class="subscription-price">
+                    $28
+                    <span>/ month</span>
+                </p>
+
+                <p class="subscription-description">
+                    A popular choice for coffee lovers who want
+                    more variety every month.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        2 bags of coffee per month
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Choice of selected blends
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Monthly delivery
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        10% member discount
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Free coffee sample
+                    </li>
+
+                </ul>
+
+                <a href="#subscription-form"
+                   class="subscription-btn">
+                    Choose Coffee Lover
+                </a>
+
+            </article>
+
+
+            <!-- PREMIUM PLUS -->
+
+            <article class="subscription-card"
+                     data-aos="fade-up"
+                     data-aos-delay="300">
+
+                <div class="subscription-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+                <h3>
+                    Premium Bean
+                </h3>
+
+                <p class="subscription-price">
+                    $40
+                    <span>/ month</span>
+                </p>
+
+                <p class="subscription-description">
+                    A premium plan for customers who want
+                    more coffee and exclusive benefits.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        3 bags of coffee per month
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Premium coffee selection
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Free monthly delivery
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        15% member discount
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Exclusive coffee samples
+                    </li>
+
+                </ul>
+
+                <a href="#subscription-form"
+                   class="subscription-btn">
+                    Choose Premium
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SUBSCRIPTION FORM
+========================= -->
+
+<section class="subscription-form-section"
+         id="subscription-form">
+
+    <div class="subscription-form-container">
+
+        <div class="subscription-form-info">
+
+            <span class="section-kicker">
+                JOIN OUR COFFEE CLUB
+            </span>
+
+            <h2>
+                Start Your Subscription
+            </h2>
+
+            <p>
+                Choose your preferred subscription level and
+                provide your contact details. Your request will
+                be prepared through email.
+            </p>
+
+        </div>
+
+
+        <div class="subscription-form-box">
+
+            <form action="mailto:hello@beanboutique.com"
+                  method="post"
+                  enctype="text/plain">
+
+                <label for="subscription">
+                    Subscription Level
+                </label>
+
+                <select id="subscription"
+                        name="Subscription Level"
+                        required>
+
+                    <option value="">
+                        Select a subscription
+                    </option>
+
+                    <option value="Basic Bean">
+                        Basic Bean - $15/month
+                    </option>
+
+                    <option value="Coffee Lover">
+                        Coffee Lover - $28/month
+                    </option>
+
+                    <option value="Premium Bean">
+                        Premium Bean - $40/month
+                    </option>
+
+                </select>
+
+
+                <label for="subFirstName">
+                    First Name
+                </label>
+
+                <input type="text"
+                       id="subFirstName"
+                       name="First Name"
+                       placeholder="Enter your first name"
+                       required>
+
+
+                <label for="subLastName">
+                    Last Name
+                </label>
+
+                <input type="text"
+                       id="subLastName"
+                       name="Last Name"
+                       placeholder="Enter your last name"
+                       required>
+
+
+                <label for="subEmail">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       id="subEmail"
+                       name="Email Address"
+                       placeholder="Enter your email address"
+                       required>
+
+
+                <button type="submit"
+                        class="subscription-submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Subscribe Now
+
+                </button>
+
+                <p class="form-note">
+                    Your email application will open with
+                    your subscription details.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+ <!-- Footer Section-->
+    <footer class="footer">
+      <p>&copy; 2026 BeanBoutique Coffee Hosue</p>
+      <p>Quality Coffee •Better Moments •Great Taste</p>
+      <p> Contact : info@beanboutique.com |
+          Phone :+95 974 651 139
+      </p>
+    </footer>
+
+
+<!-- AOS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+
+    function toggleMenu() {
+        document.getElementById("mainMenu").classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>

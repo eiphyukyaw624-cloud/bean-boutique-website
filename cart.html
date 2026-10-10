@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bean & Brew Coffee Shop</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- AOS.js -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Logo Icon"
+                        class="logo-icon">
+                    BeanBoutique
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="menu" id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee
+                            Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li>
+                        <a href="#">Services ⏷</a>
+                        <div class="dropdown">
+                            <a href="events.html">Events and Workshops</a>
+                            <a href="offer.html">Special Offers and
+                                Scriptions</a>
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Shopping Cart (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+<!-- Shopping Cart-->
+ <section class="cart-section">
+    <div class="cart-heading">
+        <p class="section-kicker">YOUR SELECTION</p>
+        <h1>Your Shopping Cart</h1>
+        <p>
+            Add your favourite coffee and equipment to your
+            basket for furture purchases.
+        </p>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div id="emptyCart" class="empty-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h2>Your cart is empty</h2>
+        <p>Add your favourite coffee or equipment to your cart</p>
+    </div>
+    
+        <div class="empty-cart-buttons">
+            <a href="coffee-selection.html"
+            class="cart-shopping-btn">
+        Browse Coffee
+            </a>
+            <a href="equipment.html"
+           class="cart-shopping-btn">
+           Browse Equipment
+            </a>
+        </div>
+    <!-- Cart Summary -->
+     <div id="cartSummary" class="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="totalPrice">
+                $0.00
+            </span>
+        </div>
+        <div class="summary-row">
+            <span>Delivery</span>
+            <span>Calculated at checkout</span>
+        </div>
+        <hr>
+        <div class="summary-total">
+            <span>Total</span>
+            <span id="cartTotal">
+                $0.00
+            </span>
+        </div>
+
+        <div class="cart-actions">
+            <a href="coffee-selection.html"
+               class="continue-shopping">
+            <i class="fa-solid fa-arrow-left"></i>
+        Continue Shopping
+            </a>
+
+        <button onclick="checkout()"
+                class="checkout-btn">
+            Proceed to checkout
+        <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        </div>
+    </div>
+ </section>
+
+  <!-- Footer Section-->
+    <footer class="footer">
+      <p>&copy; 2026 BeanBoutique Coffee Hosue</p>
+      <p>Quality Coffee •Better Moments •Great Taste</p>
+      <p> Contact : info@beanboutique.com |
+          Phone :+95 974 651 139
+      </p>
+    </footer>
+     <script src="js/cart1.js"></script>
+        <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }  
+    </script>
+    </body>
+</html>

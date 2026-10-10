@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bean & Brew Coffee Shop</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- AOS.js -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Logo Icon"
+                        class="logo-icon">
+                    BeanBoutique
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="menu" id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li>
+                        <a href="#">Services ⏷</a>
+                        <div class="dropdown">
+                            <a href="events.html">Events and Workshops</a>
+                            <a href="offer.html">Special Offers and
+                                Scriptions</a>
+
+                        </div>
+                    </li>
+                     <li>
+            <a href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i> Shopping Cart
+              (<span id="cartCount">0</span>)</a>
+          </li>
+                </ul>
+                </div>
+        </nav>
+        <!-- Coffee Selection-->
+           <main class="coffee-container">
+         <section class="coffee-heading">
+            <h1>
+                <i class="fa-solid fa-mug-hot"></i>
+                Our Coffee Selection
+            </h1>
+            <p>
+                Discover our unique blends and carefully selected
+                single-origin coffees, each with its own flavour, aroma and 
+                recommended brewing method.
+            </p>
+         </section>
+
+            <!-- Search-->
+            <div class="search-container">
+                    <input type="text" id="productSearch" 
+                    class="searchInput" placeholder="Search..."
+                        onkeyup="filterItems()">
+                    <!-- <button><i class="fa fa-search"></i></button> -->
+                </div>
+            <!-- Coffee Cards-->
+            <div class="coffee-grid">
+
+            <!-- 1.Americano-->
+                <div class="coffee-card" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="800">
+                   
+                    <img src="images/Americano.jpg"
+                        alt="Americano Coffee" class="coffee-image">
+
+                    <div class="coffee-content">
+                        <span class="coffee-type">
+                            SINGLE ORIGIN
+                        </span>
+                        <h2 class="coffee-name">Americano</h2>
+                        <span class="coffee-origin">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Colombia
+                        </span>
+
+                        <p class="coffee-description">
+                            A smooth and refreshing coffee made by combining rich
+                            espresso with hot water.It has a clean flavour and is perfect
+                            for coffee lovers who prefer a lighter cup.
+                        </p>
+
+                        <h3>
+                            <i class="fa-solid fa-wine-glass"></i>
+                            Tasting Notes
+                        </h3>
+                        <p class="coffee-notes">
+                            Caramel, chocolate, nutty
+                        </p>
+                        
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Recommended Brewing
+                        </h3>
+                    
+                        <p class="brewing-method">
+                            Espresso + Hot Water
+                        </p>
+                <button class="add-cart-btn"
+                onclick="addCoffeeToCart('Americano', 4.50, 'images/Americano.jpg')">
+                <i class="fa-solid fa-cart-plus"></i>
+            Add to Cart</button>
+                    </div>
+                </div>
+              
+                <!-- 2.Espresso-->
+                <div class="coffee-card" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="800">
+                   
+                    <img src="images/Espresso.jpg"
+                        alt="Espresso" class="coffee-image">
+
+                    <div class="coffee-content">
+                        <span class="coffee-type">
+                            SINGLE ORIGIN
+                        </span>
+                        <h2 class="coffee-name">Espresso</h2>
+                        <span class="coffee-origin">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Brazil
+                        </span>
+
+                        <p class="coffee-description">
+                            A concentrated coffee with a rich aroma,full body and bold flavour.
+                            Its smooth cocoa and nutty character creates a satisfying and traditional
+                            espresso experience. 
+                        </p>
+
+                        <h3>
+                            <i class="fa-solid fa-wine-glass"></i>
+                            Tasting Notes
+                        </h3>
+                        <p class="coffee-notes">
+                          Cocoa,hazelnut,brown sugar
+                        </p>
+                        
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Recommended Brewing
+                        </h3>
+                    
+                        <p class="brewing-method">
+                            Espresso Machine
+                        </p>
+                <button class="add-cart-btn"
+                onclick="addCoffeeToCart('Espresso', 4.00, 'images/Espresso.jpg')">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to Cart</button>
+                    </div>
+                </div>
+                
+                 <!-- 3.Cappuccino-->
+                <div class="coffee-card" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="800">
+                   
+                    <img src="images/Cappuccino.jpg"
+                        alt="Cappuccino" class="coffee-image">
+
+                    <div class="coffee-content">
+                        <span class="coffee-type">
+                            SINGLE ORIGIN
+                        </span>
+                        <h2 class="coffee-name">Cappuccino</h2>
+                        <span class="coffee-origin">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Ethiopia
+                        </span>
+
+                        <p class="coffee-description">
+                           A balanced combination of espresso, steamed milk and creamy
+                           milk foam.It offers a smooth texture with gentle sweetness
+                           and a rich coffee flavour.
+                        </p>
+
+                        <h3>
+                            <i class="fa-solid fa-wine-glass"></i>
+                            Tasting Notes
+                        </h3>
+                        <p class="coffee-notes">
+                         Floral,citrus,honey
+                        </p>
+                        
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Recommended Brewing
+                        </h3>
+                    
+                        <p class="brewing-method">
+                            Espresso Machine
+                        </p>
+                <button class="add-cart-btn"
+                onclick="addCoffeeToCart('Cappuccino', 5.00,'images/Cappuccino.jpg')">
+                <i class="fa-solid fa-cart-plus"></i>
+            Add to Cart</button>
+                    </div>
+                </div>
+
+                 <!-- 4.latte-->
+                <div class="coffee-card" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="800">
+                   
+                    <img src="images/Latte.jpg"
+                        alt="Latte" class="coffee-image">
+
+                    <div class="coffee-content">
+                        <span class="coffee-type">
+                            Unique Blend
+                        </span>
+                        <h2 class="coffee-name">Latte</h2>
+                        <span class="coffee-origin">
+                            <i class="fa-solid fa-location-dot"></i>
+                           Brazil & Colombia
+                        </span>
+
+                        <p class="coffee-description">
+                           A smooth and creamy coffee made with espresso and steamed milk,
+                           finished with a light layer of foam.Its mild coffee flavour 
+                           and silky texture make it ideal for a relaxed coffee break.
+                        </p>
+
+                        <h3>
+                            <i class="fa-solid fa-wine-glass"></i>
+                            Tasting Notes
+                        </h3>
+                        <p class="coffee-notes">
+                         Milk chocolate,caramel,roasted nuts
+                        </p>
+                        
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Recommended Brewing
+                        </h3>
+                    
+                        <p class="brewing-method">
+                            Espresso Machine
+                        </p>
+                    <button class="add-cart-btn"
+                onclick="addCoffeeToCart('Latte', 5.50,'images/Latte.jpg')">
+                <i class="fa-solid fa-cart-plus"></i>
+            Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- 5.Mocha-->
+                <div class="coffee-card" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="800">
+                   
+                    <img src="images/Mocha.jpg"
+                        alt="Mocha" class="coffee-image">
+
+                    <div class="coffee-content">
+                        <span class="coffee-type">
+                            Unique Blend
+                        </span>
+                        <h2 class="coffee-name">Mocha</h2>
+                        <span class="coffee-origin">
+                            <i class="fa-solid fa-location-dot"></i>
+                           Brazil & Colombia
+                        </span>
+
+                        <p class="coffee-description">
+                           A rich and idulgent coffee combining bold espresso with chocolate add
+                           steamed milk.Its smooth texture and sweet cocoa flavour make it a popular
+                           choice for customers who enjoy a dessert-style coffee.
+
+                        </p>
+
+                        <h3>
+                            <i class="fa-solid fa-wine-glass"></i>
+                            Tasting Notes
+                        </h3>
+                        <p class="coffee-notes">
+                         Dark chocolate, cocoa, caramel
+                        </p>
+                        
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Recommended Brewing
+                        </h3>
+                    
+                        <p class="brewing-method">
+                            Espresso Machine
+                        </p>
+                        <button class="add-cart-btn"
+                onclick="addCoffeeToCart('Mocha', 5.00,'images/Mocha.jpg')">
+                <i class="fa-solid fa-cart-plus"></i>
+            Add to Cart</button>
+
+                    </div>
+                </div>
+                <!-- 6.Cold Brew-->
+                <div class="coffee-card" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="800">
+                   
+                    <img src="images/cold-brew.jpg"
+                        alt="Cold Brew" class="coffee-image">
+
+                    <div class="coffee-content">
+                        <span class="coffee-type">
+                            Unique Blend
+                        </span>
+                        <h2 class="coffee-name">Cold Brew</h2>
+                        <span class="coffee-origin">
+                            <i class="fa-solid fa-location-dot"></i>
+                         Colombia & Brazil
+                        </span>
+
+                        <p class="coffee-description">
+                           A smooth and refreshing coffee prepared by slowly steeping
+                           ground coffee in cold water.The longer brewing process creates
+                           a naturally sweet flavour with low bitterness, making it ideal
+                           for a chilled coffee drink.
+                        </p>
+
+                        <h3>
+                            <i class="fa-solid fa-wine-glass"></i>
+                            Tasting Notes
+                        </h3>
+                        <p class="coffee-notes">
+                         Chocolate, caramel, nutty, smooth
+                        </p>
+                        
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Recommended Brewing
+                        </h3>
+                    
+                        <p class="brewing-method">
+                            Cold Brew / Slow Steeping
+                        </p>
+                        <button class="add-cart-btn"
+                onclick="addCoffeeToCart('Cold Brew', 5.50,'images/Cold Brew.jpg')">
+                <i class="fa-solid fa-cart-plus"></i>
+            Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            </main>
+        <!-- Footer Section-->
+    <footer class="footer">
+      <p> &copy; 2026 BeanBoutique Coffee Hosue</p>
+      <p>Quality Coffee •Better Moments •Great Taste</p>
+      <p> Contact : info@beanboutique.com |
+          Phone :+95 974 651 139
+      </p>
+    </footer>
+
+<script src="js/cart1.js"></script>
+
+<script>
+
+    function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+    }
+
+    AOS.init();
+
+    function filterItems() {
+
+        const search_input =
+            document.getElementById('productSearch').value.toLowerCase();
+
+        const cards =
+            document.querySelectorAll('.coffee-card');
+
+        cards.forEach(function(card) {
+
+            const cname =
+                card.querySelector('.coffee-name')
+                    .textContent
+                    .toLowerCase();
+
+            if (cname.includes(search_input)) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+    }
+
+</script>
+
+</body>
+</html>

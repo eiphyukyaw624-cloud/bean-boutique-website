@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bean Boutique Coffee House</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link 
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  </head>
+
+  <body>
+    <!-- Navigation Bar-->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Bean Boutique Logo" class="logo-icon">
+          BeanBoutique
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="menu" id="navMenu">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li><a href="coffee-selection.html">Coffee Selection</a></li>
+          <li><a href="equipment.html">Brewing Equipment</a></li>
+          <li>
+            <a href="#">Services ⏷</a>
+            <div class="dropdown">
+              <a href="events.html">Events and Workshops</a>
+              <a href="offer.html">Special Offers and  Scriptions</a>
+            </div>
+          </li>
+          <li>
+            <a href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i> Shopping Cart
+              (<span id="cartCount">0</span>)</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Main Content-->
+    <main>
+      <!-- Hero Slideshow-->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1: Coffee beans-->
+          <div class="swiper-slide">
+            <img src="images/fresh-coffee-1.jpg" alt="Freshly roasted coffee beans">
+            <div class="swiper-text">
+              <h1>Fresh Coffee, Every Day</h1>
+              <p>Discover carefully selected coffee beans and unique blends made for every coffee lover.</p>
+            </div>
+          </div>
+          <!-- Slide 2: Brewing Equipment-->
+          <div class="swiper-slide">
+            <img src="images/coffee-beans.jpg" alt="Coffee Brewing Equipment">
+            <div class="swiper-text">
+              <h1>Brew Your Way</h1>
+              <p>Find quality brewing equipment to create your perfect cup at home.</p>
+            </div>
+          </div>
+          <!-- Slide 3: Coffee Experience-->
+            <div class="swiper-slide">
+              <img src="images/coffee.jpg" alt="Freshy brewed coffee">
+              <div class="swiper-text">
+              <h1>Your Perfect Coffee Moment</h1>
+              <p>Enjoy rich flavours, comforting aromas and freshly brewed coffee every day.</p>
+              </div>
+            </div>
+            <!-- Slide 4: Community-->
+            <div class="swiper-slide">
+              <img src="images/Fresh-coffee.jpg" alt="People enjoying coffee together">
+              <div class="swiper-text">
+              <h1>Coffee Brings Us together</h1>
+              <p>Connect with fellow coffee lovers through our welcoming community, events and workshops</p>
+              </div>
+            </div>
+            
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <!-- Welcome Section--> 
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div>
+            <h2>Welcome to Bean Boutique</h2>
+            <h2>Good Coffee • Good Moments</h2>
+            <p>
+              At BeanBoutique Coffee House, we are passionate about providing high-quality
+            coffee and creating a welcoming experience for every customer. Our website offers
+            a selection of freshly roasted coffee beans, brewing equipment and useful
+            services for coffee lovers.
+            </p>
+            <p>
+            Customers can explore different coffee varieties, learn about brewing methods and
+            choose suitable equipment for preparing delicious coffee at home.
+            </p>
+            <a href="coffee-selection.html" class="hero-button">
+              Explore Our Coffee
+            </a>
+          </div>
+          <!-- <div class="hero-cup">☕</div> -->
+        </div>
+      </section>
+
+      <div id="offerModal" class="modal-overlay">
+        <div class="modal-content">
+          <button class="close-btn" id="closeModal">&times;</button>
+          <h2>Special First-Time Offer!</h2>
+          <p>Sign up now to get 10% off your first purchase.</p>
+
+          <form id="offerForm">
+            <div class="input-group">
+              <label for="userName">Name</label>
+              <input
+                type="text"
+                id="userName"
+                required
+                placeholder="Enter your name"
+              >
+            </div>
+            <div class="input-group">
+              <label for="userEmail">Email</label>
+              <input
+                type="email"
+                id="userEmail"
+                required
+                placeholder="Enter your email"
+              >
+            </div>
+            <button type="submit" class="submit-btn">Get Discount</button>
+          </form>
+
+        </div>
+      </div>
+      <!-- Coffee Selection Section-->
+      <section class="coffee-info" data-aos="fade-up">
+        <h2> Our Coffee Selection</h2>
+        <p>
+          Discover a range of carefully selected coffee beans with different flavours and
+          aromas. Whether you prefer a strong espresso, a smooth latte or freshly brewed
+          filter coffee, BeanBoutique has something for every coffee lover
+        </p>
+        <div class="features">
+          <div class="feature-box">
+            <i class="fa-solid fa-mug-hot feature-icon"></i>
+            <h3>Fresh Coffee</h3>
+            <p>
+              Enjoy freshly roasted coffee beans with rich
+              flaours and pleasant aromas.
+            </p>
+          </div>
+          <div class="feature-box" data-aos="fade-up">
+            <i class="fa-solid fa-mug-saucer feature-icon"></i>
+            <h3> Brewing Equipment</h3>
+            <p> Find suitable coffee markers and brewing equipment for your coffee routine.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fa-solid fa-heart feature-icon"></i>
+            <h3>Customer Service</h3>
+            <p>
+              We aim to provide a simple and enjoyable shopping experience for 
+              every customer.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="why-us">
+        <h2>Why Choose BeanBoutique?</h2>
+        <ul>
+          <li>Fresh and quality coffee beans</li>
+          <li>A variety of coffee selections</li>
+          <li>Brewing equipment for coffee lovers</li>
+          <li>Customer-focused services</li>
+        </ul>
+      </section>
+      </main>
+      <!-- Footer Section-->
+    <footer class="footer">
+      <p> &copy; 2026 BeanBoutique Coffee Hosue</p>
+      <p>Quality Coffee •Better Moments •Great Taste</p>
+      <p> Contact : info@beanboutique.com |
+          Phone :+95 974 651 139
+      </p>
+    </footer>
+
+    <script src="js/popup.js"></script>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/slide.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once:true,
+        offset: 100
+      });
+    </script>
+  </body>
+</html>

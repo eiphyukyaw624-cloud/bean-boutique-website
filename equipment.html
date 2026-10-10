@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bean & Brew Coffee Shop</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- AOS.js -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Logo Icon"
+                        class="logo-icon">
+                    BeanBoutique
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="menu" id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee
+                            Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li>
+                        <a href="#">Services ⏷</a>
+                        <div class="dropdown">
+                            <a href="events.html">Events and Workshops</a>
+                            <a href="offer.html">Special Offers and
+                                Scriptions</a>
+
+                        </div>
+                    </li>
+                    <li>
+            <a href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i> Shopping Cart
+              (<span id="cartCount">0</span>)</a>
+          </li>
+            </ul>
+            </div>
+        </nav>
+
+        <!-- Page Title -->
+        <section class="title-section">
+            <h1>Brewing Equipment</h1>
+            <p>Quality equipment to help you create great coffee at home</p>
+
+        <!-- Search-->
+            <div class="search-container">
+                <input type="text" id="itemSearch" class="searchInput"
+                    placeholder="Search..."
+                    onkeyup="filterItems()">
+            </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <main class="equip-container">
+
+            <div class="equip-grid">
+        
+        <!-- Equipment 1-->
+                <div class="equip-card" 
+                    data-aos="fade-up" 
+                    data-aos-delay="200"
+                    data-aos-duration="800">
+                
+                <img src="images/espresso-machine.jpg" alt="Espresso Machine">
+                    <div class="equip-info">
+                        <h2 class="equip-name">Espresso Machine</h2>
+                        <p>
+                            A powerful coffee machine designed to produce rich and 
+                            concentrated espresso using pressure.It is suitable for
+                            making espresso,cappuccino and latte drinks.
+                        </p>
+                <p class="usage-tip">
+                    <strong>Usage Tip:</strong>
+                    Use finely ground coffee, tamp it evenly and allow the machine
+                    to reach the correct brewing temperature before extraction.
+                </p>
+                        
+                <span class="price">$250.00</span>
+                        
+                <button class="add-cart-btn" 
+                        onclick="addEquipmentToCart
+                        ('EQ001',
+                        'Espresso Machine',
+                          250,
+                        'images/espresso-machine.jpg',1)">
+                <i class="fa-solid fa-cart-plus"></i>
+                    Add to cart
+                </button>
+                    </div>
+
+                </div>
+
+                <!-- Equipment 2-->
+                <div class="equip-card" 
+                    data-aos="fade-up" 
+                    data-aos-delay="200"
+                    data-aos-duration="800">
+                
+                <img src="images/french-press.jpg" alt="French Press">
+                    <div class="equip-info">
+                        <h2 class="equip-name">French Press</h2>
+                        <p>
+                            A simple manual brewing device that produces rich and 
+                            full-bodied coffee. It is easy to use and suitable for everyday 
+                            coffee preparation.
+                        </p>
+                <p class="usage-tip">
+                    <strong>Usage Tip:</strong>
+                    Use coarse coffee grounds and hot water. Allow the coffee to steep
+                    for approximately four minutes before pressing the filter.
+                </p>
+                        <span class="price">$35.00</span>
+                <button class="add-cart-btn" 
+                        onclick="addEquipmentToCart('EQ002','French Press',
+                                 35,'images/french-press.jpg',1)">
+                <i class="fa-solid fa-cart-plus"></i>
+                    Add to cart
+                </button>
+                    </div>
+
+                </div>
+                <!-- Equipment 3-->
+                <div class="equip-card" 
+                    data-aos="fade-up" 
+                    data-aos-delay="200"
+                    data-aos-duration="800">
+                
+                <img src="images/pour-over-dripper.jpg" alt="Pour Over Dripper">
+                    <div class="equip-info">
+                        <h2 class="equip-name">Pour Over Dripper</h2>
+                        <p>
+                            A manual brewing tool that allows hot water to pass through 
+                            coffee grounds and a paper filter. It produces a clean add
+                            balanced cup.
+                        </p>
+                <p class="usage-tip">
+                    <strong>Usage Tip:</strong>
+                    Use medium-fine coffee grounds and pour hot water slowly in a circular
+                    motion to achieve an even extraction.
+                </p>
+                        <span class="price">$22.00</span>
+                 <button class="add-cart-btn" 
+                        onclick="addEquipmentToCart('EQ003','Pour Over Dripper',
+                                 22,'images/pour-over-dripper.jpg',1)">
+                <i class="fa-solid fa-cart-plus"></i>
+                    Add to cart
+                </button>
+                    </div>
+                </div>
+                <!-- Equipment 4-->
+                <div class="equip-card" 
+                    data-aos="fade-up" 
+                    data-aos-delay="200"
+                    data-aos-duration="800">
+                
+                <img src="images/moka-pot.jpg" alt="Moka Pot">
+                    <div class="equip-info">
+                        <h2 class="equip-name">Moka Pot</h2>
+                        <p>
+                            A traditional stovetop coffee maker thaat produces
+                            strong and concentrated coffee.It is a popular choice
+                            for home coffee lovers.
+                        </p>
+                <p class="usage-tip">
+                    <strong>Usage Tip:</strong>
+                    Fill the lower chamber with water and use medium-fine coffee grounds.
+                    Heat gently and remove from the stove when the coffee is ready.
+                </p>
+                        <span class="price">$30.00</span>
+                     <button class="add-cart-btn"
+                             onclick="addEquipmentToCart('EQ004','Moka Pot',30,'images/moka-pot.jpg',1)">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to cart
+                     </button>
+                    </div>
+                </div>
+                <!-- Coffee cards are generated by JavaScript -->
+            </div>
+        </main>
+<!-- Footer Section-->
+    <footer class="footer">
+      <p> &copy; 2026 BeanBoutique Coffee Hosue</p>
+      <p>Quality Coffee •Better Moments •Great Taste</p>
+      <p> Contact : info@beanboutique.com |
+          Phone :+95 974 651 139
+      </p>
+    </footer>
+    
+    <script src="js/cart1.js"></script>
+    <script>
+        function filterItems(){
+            const search=document.getElementById("itemSearch").value.toLowerCase();
+            const items=document.querySelectorAll(".equip-card");
+
+            items.forEach(function(item){
+                const name=item.querySelector(".equip-name").textContent.toLowerCase();
+
+            if (name.includes(search)){
+                item.style.display="";
+            }
+            else{
+                item.style.display="none";
+            }
+            });
+        }
+        AOS.init();
+    </script>
+    </body>
+</html>

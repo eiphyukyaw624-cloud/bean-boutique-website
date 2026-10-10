@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bean & Brew Coffee Shop</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- AOS.js -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Logo Icon"
+                        class="logo-icon">
+                    BeanBoutique
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="menu" id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee
+                            Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li>
+                        <a href="#">Services ⏷</a>
+                        <div class="dropdown">
+                            <a href="events.html">Events and Workshops</a>
+                            <a href="offer.html">Special Offers and
+                                Scriptions</a>
+
+                        </div>
+                    </li>
+                    <li>
+            <a href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i> Shopping Cart
+              (<span id="cartCount">0</span>)</a>
+          </li>
+                </ul>
+            </div>
+        </nav>
+<!-- Upcoming Events-->
+    <main class="events-container"
+          id="events">
+
+        <div class="section-heading">
+            <span class="section-kicker">
+                UPCOMING EXPERIENCES
+            </span>
+            <h1>Discover Our Events</h1>
+            <p>
+                Take part in our friendly coffee events and improve your
+                coffee knowledge while meeting other coffee lovers.
+            </p>
+        </div>
+
+    <!-- Search-->
+    <div class="event-search-section">
+        <div class="search-container">
+            <input
+                   type="text"
+                   id="eventSearch"
+                   class="searchInput"
+                   placeholder="Search events and workshops..."
+                   onkeyup="filterEvents()">
+        </div>
+    </div>
+
+<div class="events-grid">
+    
+         <!-- Event1 -->
+        <article class="event-card" data-aos="fade-up"
+                    data-aos-duration="800">
+                <div class="event-image">
+            
+                <img src="images/tasting.jpg"
+                        alt="Coffee Tasting Session" class="coffee-image">
+                <span class="event-date">
+                    12 OCT
+                </span>
+                </div>
+            <div class="event-content">
+                <span class="event-type">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    Coffee Tasting Session
+                </span>
+                <h2>
+                    Coffee Tasting Session
+                </h2>
+                <p>
+                    Explore different coffee origins and discover how aroma,
+                    acidity, sweetness and body can change from one coffee
+                    to another.
+                </p>
+            <div class="event-details">
+                <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    12 October 2026
+                </p>
+                <p>
+                    <i class="fa-regular fa-location-dot"></i>
+                    BeanBoutique Cafe
+                </p>
+        </div>
+            <a href="#registration"
+                class="event-register-btn"
+                onclick="selectEvent('Coffee Tasting Session')">
+                Register for Event</a>
+            </div>
+        </article>
+
+        <!-- Event2 -->
+        <article class="event-card" data-aos="fade-up" data-aos-delay="150"
+                    data-aos-duration="800">
+
+                    <div class="event-image">
+                <img src="images/brewing.jpg"
+                        alt="Home Brewing Class" class="Home Brewing Class">
+                <span class="event-date">
+                    19 OCT
+                </span>
+                </div>
+            <div class="event-content">
+                <span class="event-type">
+                    <i class="fa-solid fa-filter"></i>
+                    Brewing Workshop
+                </span>
+                <h2>
+                    Home Brewing Class
+                </h2>
+                <p>
+                    Learn how to prepare delicious coffee at home using simple
+                    brewing methods such as French Press, Pour-Over and Moka Pot.
+                </p>
+            <div class="event-details">
+                <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    19 October 2026
+                </p>
+                <p>
+                    <i class="fa-regular fa-clock"></i>
+                    10:00 AM - 12:00 PM
+                </p>
+                <p>
+                    <i class="fa-regular fa-location-dot"></i>
+                    BeanBoutique Cafe
+                </p>
+            </div>
+            <a href="#registration"
+                class="event-register-btn"
+                onclick="selectEvent('Home Brewing Class')">
+                Register for Event</a>
+            </div>
+        </article>
+       
+        <!-- Event3 -->
+        <article class="event-card" data-aos="fade-up" data-aos-delay="300"
+                    data-aos-duration="800">
+                
+                <div class="event-image">
+                <img src="images/roaster.jpg"
+                        alt="Meet the Roaster" class="Meet the Roaster">
+                <span class="event-date">
+                    26 OCT
+                </span>
+                </div>
+            <div class="event-content">
+                <span class="event-type">
+                    <i class="fa-solid fa-fire"></i>
+                    Coffee Roasting
+                </span>
+                <h2>
+                    Meet the Roaster
+                </h2>
+                <p>
+                    Meet our coffee roaster and learn how green coffee beans are selected,
+                    roasted and prepared to create different flavour profiles.
+                </p>
+            <div class="event-details">
+                <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    26 October 2026
+                </p>
+                <p>
+                    <i class="fa-regular fa-clock"></i>
+                    3:00 PM - 5:00 PM
+                </p>
+                <p>
+                    <i class="fa-regular fa-location-dot"></i>
+                    BeanBoutique Cafe
+                </p>
+            </div>
+            <a href="#registration"
+                class="event-register-btn"
+                onclick="selectEvent('Meet the Roaster')">
+                Register for Event</a>
+            </div>
+         </article>
+        </div>
+    </main>
+
+    <!-- Registration-->
+    <section class="registration-section"
+            id="registration">
+
+    <div class="registration-container">
+
+    <!-- Left information-->
+    <div class="registration-info"
+         data-aos="fade-right">
+        
+        <span class="section-kicker">
+            JOIN US
+        </span>
+    <h2>
+        Register for an Event
+    </h2>
+    <p>
+        Choose an event above and complete the registraion form.Your 
+        registration details will be prepared in an email.
+    </p>
+    <div class="registraion-benefit">
+        <div>
+            <i class="fa-solid fa-check"></i>
+            <span>
+                Learn practical coffee skills
+            </span>
+        </div>
+    <div>
+        <i class="fa-solid fa-check"></i>
+        <span>
+            Discover new coffee flavours
+        </span>
+    </div>
+    <div>
+        <i class="fa-solid fa-check"></i>
+        <span>
+            Meet other coffee enthusiasts
+        </span>
+    </div>
+    </div>
+    </div>
+    <!-- Registration Form -->
+
+            <div class="registration-form-box"
+                data-aos="fade-left">
+
+                <form
+                    action="mailto:hello@beanboutique.com"
+                    method="post"
+                    enctype="text/plain">
+
+
+                    <h3>
+                        Event Registration
+                    </h3>
+
+
+                    <!-- Selected Event -->
+
+                    <label for="eventName">
+                        Selected Event
+                    </label>
+
+                    <select
+                        id="eventName"
+                        name="Event"
+                        required>
+                        <option value="">
+                            Select an event
+                        </option>
+
+                        <option value="Coffee Tasting Session">
+                            Coffee Tasting Session
+                        </option>
+
+                        <option value="Home Brewing Class">
+                            Home Brewing Class
+                        </option>
+
+                        <option value="Meet the Roaster">
+                            Meet the Roaster
+                        </option>
+
+                    </select>
+
+
+                    <!-- First Name -->
+
+                    <label for="firstName">
+                        First Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="First Name"
+                        placeholder="Enter your first name"
+                        required>
+
+
+                    <!-- Last Name -->
+
+                    <label for="lastName">
+                        Last Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="Last Name"
+                        placeholder="Enter your last name"
+                        required>
+
+
+                    <!-- Email -->
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email Address"
+                        placeholder="Enter your email address"
+                        required>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="registration-submit">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Register Now
+
+                    </button>
+
+
+                    <p class="form-note">
+
+                        Your email application will open
+                        with your registration details.
+
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+        
+        <!-- Footer Section-->
+    <footer class="footer">
+      <p>&copy; 2026 BeanBoutique Coffee Hosue</p>
+      <p>Quality Coffee •Better Moments •Great Taste</p>
+      <p> Contact : info@beanboutique.com |
+          Phone :+95 974 651 139
+      </p>
+    </footer>
+        <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }  
+    </script>
+
+        <script>
+        AOS.init();
+        function filterEvents() {
+            const input = document.getElementById('eventSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.event-card');
+
+            cards.forEach(function(card) {
+                const text = card.textContent.toLocaleLowerCase();
+                if (text.includes(input)){
+                    card.style.display='block';
+                }
+                else{
+                    card.style.display='none';
+                }
+            });
+        }
+    </script>
+        <script src="js/register.js"></script>
+        <script src="js/slide.js"></script>
+
+    </body>
+</html>
